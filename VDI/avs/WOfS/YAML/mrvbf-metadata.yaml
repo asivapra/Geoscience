@@ -1,0 +1,28 @@
+creation_dt: '2012-09-12T00:00:00'
+extent:
+  center_dt: '2012-09-12T00:00:00'
+  coord:
+    ll: {lat: -44.0001389, lon: 112.09998611}
+    lr: {lat: -44.0001389, lon: 153.09998611}
+    ul: {lat: -10.0001389, lon: 112.09998611}
+    ur: {lat: -10.0001389, lon: 153.09998611}
+  from_dt: '2012-09-12T00:00:00'
+  to_dt: '2012-09-12T00:00:00'
+format: {name: GeoTiff}
+grid_spatial:
+  projection:
+    geo_ref_points:
+      ll: {x: 112.9998611, y: -44.0001389}
+      lr: {x: 153.9998611, y: -44.0001389}
+      ul: {x: 112.9998611, y: -10.0001389}
+      ur: {x: 153.9998611, y: -10.0001389}
+    spatial_reference: GEOGCS["WGS 84",DATUM["WGS_1984",SPHEROID["WGS 84",6378137,298.257223563,AUTHORITY["EPSG","7030"]],AUTHORITY["EPSG","6326"]],PRIMEM["Greenwich",0],UNIT["degree",0.0174532925199433],AUTHORITY["EPSG","4326"]]
+id: 1471f221-fc8e-4281-da58-31d6f93128a9
+image:
+  bands:
+    band1: {path: /g/data/u46/users/bt2744/work/wofs/mrvbf/new/MrVBF_1_arc-second_resolution/mosaic/mrvbf_int.tif}
+lineage:
+  source_datasets: {}
+product_type: mrvbf
+
+

@@ -1,0 +1,49 @@
+sources:
+  - product: ls8_nbar_albers
+    measurements: [blue, green, red, nir, swir1, swir2]
+    group_by: solar_day
+    fuse_func: datacube.helpers.ga_pq_fuser
+#    source_filter:
+#      product: ls5_level1_scene
+#      gqa_iterative_mean_xy: [0, 1]
+#date_ranges:
+#  start_date: 2017-01-01
+#  end_date: 2017-01-02
+
+date_ranges:
+  start_date: 2016-01-01
+  end_date: 2016-02-01
+
+computation:
+  chunking:
+    x: 2000
+    y: 2000
+  
+location: /g/data/u46/users/sa9525/avs
+storage:
+  driver: NetCDF CF
+
+  crs: EPSG:3577
+  tile_size:
+      x: 100000.0
+      y: 100000.0
+  resolution:
+      x: 25
+      y: -25
+  chunking:
+      x: 200
+      y: 200
+      time: 1
+  dimension_order: [time, y, x]
+output_products:
+ - name: landsat_seasonal_mean
+   product_type: seasonal_stats
+   statistic: simple
+   statistic_args:
+     reduction_function: mean
+   output_params:
+     zlib: True
+     fletcher32: True
+   file_path_template: 'SR_N_MEAN/SR_N_MEAN_3577_{x:02d}_{y:02d}_{epoch_start:%Y%m%d}.nc'
+
+
